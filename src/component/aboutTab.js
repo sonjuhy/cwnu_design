@@ -1,11 +1,14 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-
+/**
+ * 
+ * use Intersection Observer API
+ */
 function App() {
     return (
-      <div>
-        <img src="assets/img/footer_bg.png" alt="aboutTab bg"/>
+      <div className='main-div'>
+        
       </div>
     );
   }
