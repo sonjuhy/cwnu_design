@@ -1,3 +1,39 @@
-.main-div {
+.workTab-main-div {
     text-align: center;
+    width: 100%;
+    height: 100vw;
+    background-image: url(../../public/assets/img/category_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#work-container{
+    display: flex;
+    align-items: center;
+}
+#workline-left{
+    background-color: white;
+    height: 3px;
+    margin-left: 15%;
+    width: 80%;
+}
+#workCategory{
+    text-align: center;
+    color: white;
+    font-size: 45px;
+}
+#workCategory-sub{
+    text-align: center;
+    color: gray;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#workCategory-sub-container{
+    display: flex;
+    align-items: center;
+}
+#workCategory-sub-blink{
+    height: 100px;
 }

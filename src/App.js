@@ -8,6 +8,15 @@ import Navbar from "react-bootstrap/Navbar";
 import MainPage from "./component/mainTab";
 import GuestPage from "./component/guestTab";
 import AboutPage from "./component/aboutTab";
+import WorkPage from "./component/workTab";
+
+import AccessoriesPage from "./component/workComponent/accessoriesTab";
+import EnvironmentPage from "./component/workComponent/environmentTab";
+import FurniturePage from "./component/workComponent/furnitureTab";
+import PackagePage from "./component/workComponent/packageTab";
+import PosterPage from "./component/workComponent/posterTab";
+import ProductPage from "./component/workComponent/productTab";
+import VideoPage from "./component/workComponent/videoTab";
 
 function App() {
   const nav_style = {
@@ -89,6 +98,14 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/guest" element={<GuestPage />} />
+          <Route path="/work" element={<WorkPage />} />
+          <Route path="/accessories" element={<AccessoriesPage />} />
+          <Route path="/environment" element={<EnvironmentPage />} />
+          <Route path="/furniture" element={<FurniturePage />} />
+          <Route path="/package" element={<PackagePage />} />
+          <Route path="/poster" element={<PosterPage />} />
+          <Route path="/product" element={<ProductPage />} />
+          <Route path="/video" element={<VideoPage />} />
         </Routes>
       </div>
     </div>

@@ -1,0 +1,23 @@
+.furniture-main-div {
+    text-align: center;
+}
+#head{
+    border-bottom: 2px solid black;
+}
+#head-title-line {
+    border-right: 2px solid black;
+}
+#head-title{
+    color: black;
+    font-size: 25px;
+    float: right;
+}
+#head-title-sub {
+    color: gray;
+    font-size: 15px;
+    float: left;
+}
+#head-title-sub-container {
+    display: flex;
+    align-items: center;
+}
