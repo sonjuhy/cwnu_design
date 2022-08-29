@@ -18,6 +18,8 @@ import PosterPage from "./component/workComponent/posterTab";
 import ProductPage from "./component/workComponent/productTab";
 import VideoPage from "./component/workComponent/videoTab";
 
+import TestPage from "./component/test";
+
 function App() {
   const nav_style = {
     backgroundColor: "transparent",
@@ -106,6 +108,7 @@ function App() {
           <Route path="/poster" element={<PosterPage />} />
           <Route path="/product" element={<ProductPage />} />
           <Route path="/video" element={<VideoPage />} />
+          <Route path="/test" element={<TestPage/>}/>
         </Routes>
       </div>
     </div>

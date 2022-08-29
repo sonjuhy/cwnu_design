@@ -8,13 +8,7 @@ import Animation1 from "./Animtaion1";
  * 
  * use Intersection Observer API
  */
-//  const boxStyle = css`
-//  width: 50px; 
-//  height: 50px; 
-//  border-radius: 100%;
-//  background: #bf5160;
-//  opacity: 0;
-// `
+
 
 function App() {
   const [pageIdx] = useState(0);

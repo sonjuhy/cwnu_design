@@ -1,7 +1,9 @@
+import {React, useRef } from 'react'
 import './mainTab.css';
 import Footer from "./footer"
 
 function App() {
+
     return (
         <div className='main-div'>
             <div className="component-div">
