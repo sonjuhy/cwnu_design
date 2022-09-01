@@ -4,6 +4,7 @@ import { Timeline, Tween } from 'react-gsap';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Animation1 from "./Animtaion1";
+import "../css/test.css";
 /**
  * 
  * use Intersection Observer API

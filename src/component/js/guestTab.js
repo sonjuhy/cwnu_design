@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Fade from 'react-reveal/Fade';
 import Footer from "./footer";
-import "./guestTab.css";
+import "../css/guestTab.css";
 
 function App() {
   const inputContent =
@@ -104,7 +105,9 @@ function App() {
             </div>
           </div>
         </div>
-        <div id="list-container">{setListItem()}</div>
+        <Fade left>
+          <div id="list-container">{setListItem()}</div>
+        </Fade>
       </div>
       <Footer />
     </div>

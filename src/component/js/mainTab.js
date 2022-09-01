@@ -1,5 +1,5 @@
 import {React, useRef } from 'react'
-import './mainTab.css';
+import '../css/mainTab.css';
 import Footer from "./footer"
 
 function App() {

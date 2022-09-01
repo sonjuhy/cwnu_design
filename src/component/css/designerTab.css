@@ -1,0 +1,45 @@
+.designer-main-div {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../../public/assets/img/category_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#designer-head{
+    padding-top: 20px;
+}
+#designer-head-sub-line {
+    border-right: 2px solid white;
+}
+#designer-head-title{
+    color: white;
+    font-size: 45px;
+    float: left;
+    padding-left: 15%;
+}
+#designer-head-title-sub-line{
+    border-bottom: 2px solid white;
+    height: 100%;
+}
+#designer-head-title-sub {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+#designer-head-title-sub-container {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+#designer-component{
+    margin-left: 5%;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}

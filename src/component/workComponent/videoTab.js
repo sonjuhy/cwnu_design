@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './css/videoTab.css';
-import Footer from "../footer"
+import Footer from "../js/footer"
 
  function App() {
     return (

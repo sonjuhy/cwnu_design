@@ -1,0 +1,50 @@
+#designerComponent-main-div {
+    text-align: center;
+}
+
+#designerComponent-image-div {
+    /* display: block;
+    
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    position: relative; */
+    /* absolute의 기본기준은 body로 처리 - 현재 요소로 기준변경 */
+    width: 90%;
+    height: 90%;
+    background-color: #fff;
+}
+
+#designerComponent-image-div img {
+    width: 100%;
+    height: 100%;
+}
+
+#designerComponent-image-div figcaption {
+    white-space: pre-wrap;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: absolute;
+    /* 이미지와 겹치게 처리 */
+    top: 0;
+    left: 0;
+
+    color: #fff;
+    text-align: left;
+    align-items: flex-end;
+    /* line-height: 200px; */
+
+    opacity: 0;
+    /* 처음엔 안보이고 */
+
+    transition: 0.3s;
+}
+
+#designerComponent-image-div:hover figcaption,
+#designerComponent-image-div:focus figcaption {
+    opacity: 1;
+}

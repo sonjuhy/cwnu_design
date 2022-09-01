@@ -5,10 +5,11 @@ import { Route, Routes } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 
-import MainPage from "./component/mainTab";
-import GuestPage from "./component/guestTab";
-import AboutPage from "./component/aboutTab";
-import WorkPage from "./component/workTab";
+import MainPage from "./component/js/mainTab";
+import DesignerPage from "./component/js/designerTab";
+import GuestPage from "./component/js/guestTab";
+import AboutPage from "./component/js/aboutTab";
+import WorkPage from "./component/js/workTab";
 
 import AccessoriesPage from "./component/workComponent/accessoriesTab";
 import EnvironmentPage from "./component/workComponent/environmentTab";
@@ -18,7 +19,7 @@ import PosterPage from "./component/workComponent/posterTab";
 import ProductPage from "./component/workComponent/productTab";
 import VideoPage from "./component/workComponent/videoTab";
 
-import TestPage from "./component/test";
+import TestPage from "./component/js/test";
 
 function App() {
   const nav_style = {
@@ -101,6 +102,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/guest" element={<GuestPage />} />
           <Route path="/work" element={<WorkPage />} />
+          <Route path="/designer" element={<DesignerPage />} />
           <Route path="/accessories" element={<AccessoriesPage />} />
           <Route path="/environment" element={<EnvironmentPage />} />
           <Route path="/furniture" element={<FurniturePage />} />
