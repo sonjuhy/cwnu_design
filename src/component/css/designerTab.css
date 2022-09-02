@@ -27,7 +27,9 @@
 #designer-head-title-sub {
     color: white;
     font-size: 25px;
-    cursor: pointer;
+    background-color: transparent;
+    border: 0px;
+    /* cursor: pointer; */
 }
 #designer-head-title-sub-container {
     padding-top: 15px;
