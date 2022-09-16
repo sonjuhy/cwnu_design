@@ -1,8 +1,40 @@
-import {React, useRef } from 'react'
+import {React, useRef, useState, useEffect } from 'react'
 import '../css/mainTab.css';
+import styled from '@emotion/styled'
 import Footer from "./footer"
 
 function App() {
+    const [target, setTarget] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [itemLists, setItemLists] = useState([1]);
+
+    const getMoreItem = async () => {
+        setIsLoaded(true);
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+        
+        setIsLoaded(false);
+      };
+
+    const onIntersect = async ([entry], observer) => {
+        if (entry.isIntersecting && !isLoaded) {
+          observer.unobserve(entry.target);
+          console.log("main page observer");
+          await getMoreItem();
+          observer.observe(entry.target);
+        }
+    };
+
+    useEffect(() => {
+        console.log("main page observer useEffect");
+        let observer;
+        if (target) {
+            observer = new IntersectionObserver(onIntersect, {
+            threshold: 0.4,
+            });
+            observer.observe(target);
+        }
+        return () => observer && observer.disconnect();
+    }, [target  ]);
 
     return (
         <div className='main-div'>
@@ -22,7 +54,7 @@ function App() {
                     <span id="main-content">우리에게 주어지는 변화를 컨트롤과 키보드의 키들이 만나 작용하는 효과로 시각화하였습니다.</span>
                 </div>
                 <img src="assets/img/logo_black.png" alt="mainPage logo" width="100px" />
-                <div className='my-box-large'><img src="assets/img/main_3.png" alt="sample img" width="100%" /></div>
+                <div className='my-box-large' ref={setTarget}><img src="assets/img/main_3.png" alt="sample img" width="100%" /></div>
                 <p id="main-content">키보드 속 각각의 문자들은 우리 개인을 의미합니다. 키보드 속 우리는 졸업이라는 META KEY를 만나 전혀 다른 새로운 작용을 보여주고자 합니다</p>
             </div>
             <Footer />

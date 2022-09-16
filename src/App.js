@@ -19,7 +19,7 @@ import PosterPage from "./component/workComponent/posterTab";
 import ProductPage from "./component/workComponent/productTab";
 import VideoPage from "./component/workComponent/videoTab";
 
-import TestPage from "./component/js/test";
+import TestPage from "./component/lab/labWindowing";
 
 function App() {
   const nav_style = {
