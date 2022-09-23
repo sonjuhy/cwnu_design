@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Fade from 'react-reveal/Fade';
-import "../css/designerComponent.css";
+import "../css/designerPageComponent.css";
 
 function App(props) {
   /**
@@ -9,17 +9,20 @@ function App(props) {
    * get data from db
    */
   const [target, setTarget] = useState(null);
+  const [productLen, setProductLen] = useState(2);
+  const [imageSrc, setImageSrc] = useState("");
 
-  const text = `${props.krName}\n${props.engName}`;
-
+  const text = `${props.productName}`;
+  const imgSrc = "assets/img/person_sample.png";
+  const imgWidth = "50px";
   return (
-    <div id="designerComponent-main-div" ref={setTarget}>
+    <div id="designerPageComponent-main-div">
       <Fade bottom>
-        <div id='designerComponent-image-div'>
+        <div id='designerPageComponent-image-div'>
         <figure>
-            <img src="assets/img/person_sample.png" alt="person_sample" />
+            <img src={imgSrc} alt="person_sample"/>
             <figcaption>
-              <div id="designerComponent-image-text-div">
+              <div id="designerPageComponent-image-text-div">
                 {text}
               </div>
             </figcaption>

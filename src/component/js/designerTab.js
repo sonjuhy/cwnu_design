@@ -1,10 +1,6 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/designerTab.css";
 import Person from "./designerComponent";
-
-import { FixedSizeList as List } from "react-window";
-import {AutoSizer} from "react-virtualized";
-import PeopleList from "./designerList";
 
 function App() {
   /**
@@ -55,7 +51,6 @@ function App() {
       "content38",
       "content39",
     ];
-    console.log("setPersonList : " + e);
     let list = data;
     if (selected === 1) {
       list = data1;
@@ -67,7 +62,7 @@ function App() {
       list = data;
     }
     // setPeopleList(list);
-    setListLen(list.length);
+    // setListLen(list.length);
     const listTmp = list.map((item, index) => (
       <div key={item}>
         <Person krName={item} engName={item} />
@@ -123,42 +118,7 @@ function App() {
         </div>
       </div>
       <div>
-        {/* <PeopleList selected={selected} list={peopleList} listlen={listLen}/> */}
-        {/* <List
-          className="List"
-          height={800}
-          itemCount={listLen}
-          itemSize={1}
-          width={1200}
-          itemData={selected}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          {setPersonList}
-        </List> */}
-        <AutoSizer>
-        {({ height, width }) => (
-          <List
-          className="List"
-          height={height}
-          itemCount={listLen}
-          itemSize={230}
-          width={width}
-          itemData={selected}
-          // style={{
-          //   display: "flex",
-          //   justifyContent: "center",
-          //   alignItems: "center",
-          // }}
-        >
-          {setPersonList}
-        </List>
-        )}
-        
-        </AutoSizer>
+        {setPersonList()}
       </div>
     </div>
   );

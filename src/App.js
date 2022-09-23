@@ -19,6 +19,8 @@ import PosterPage from "./component/workComponent/posterTab";
 import ProductPage from "./component/workComponent/productTab";
 import VideoPage from "./component/workComponent/videoTab";
 
+import DesignerPersonalPage from "./component/designComponent/js/designerPage";
+
 import TestPage from "./component/lab/labWindowing";
 
 function App() {
@@ -110,6 +112,7 @@ function App() {
           <Route path="/poster" element={<PosterPage />} />
           <Route path="/product" element={<ProductPage />} />
           <Route path="/video" element={<VideoPage />} />
+          <Route path="/design_personal" element={<DesignerPersonalPage/>}/>
           <Route path="/test" element={<TestPage/>}/>
         </Routes>
       </div>

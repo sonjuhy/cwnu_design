@@ -1,8 +1,8 @@
-#designerComponent-main-div {
+#designerPageComponent-main-div {
     text-align: center;
 }
 
-#designerComponent-image-div {
+#designerPageComponent-image-div {
     /* display: block;
     
     width: 100%;
@@ -17,12 +17,12 @@
     background-color: #fff;
 }
 
-#designerComponent-image-div img {
-    width: 100%;
-    height: 100%;
+#designerPageComponent-image-div img {
+    width: 100px;
+    height: 100px;
 }
 
-#designerComponent-image-div figcaption {
+#designerPageComponent-image-div figcaption {
     white-space: pre-wrap;
     width: 100%;
     height: 100%;
@@ -39,14 +39,14 @@
     transition: 0.3s;
 }
 
-#designerComponent-image-div:hover figcaption,
-#designerComponent-image-div:focus figcaption {
+#designerPageComponent-image-div:hover figcaption,
+#designerPageComponent-image-div:focus figcaption {
     opacity: 1;
 }
 
-#designerComponent-image-text-div{
+#designerPageComponent-image-text-div{
     color: #fff;
-    text-align: left;
+    /* text-align: left;
     position: absolute;
-    bottom: 0px;
+    bottom: 0px; */
 }
