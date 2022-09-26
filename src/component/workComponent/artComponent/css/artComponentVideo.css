@@ -1,29 +1,20 @@
-#designerComponent-main-div {
+#artComponent-main-div {
     text-align: center;
     display: inline-block;
 }
 
-#designerComponent-image-div {
-    /* display: block;
-    
-    width: 100%;
-    height: 100%;
-
-    overflow: hidden;
-
-    position: relative; */
-    /* absolute의 기본기준은 body로 처리 - 현재 요소로 기준변경 */
+#artComponent-image-div {
     width: 90%;
     height: 90%;
     background-color: #fff;
 }
 
-#designerComponent-image-div img {
+#artComponent-image-div img {
     width: 100%;
     height: 100%;
 }
 
-#designerComponent-image-div figcaption {
+#artComponent-image-div figcaption {
     white-space: pre-wrap;
     width: 100%;
     height: 100%;
@@ -40,12 +31,12 @@
     transition: 0.3s;
 }
 
-#designerComponent-image-div:hover figcaption,
-#designerComponent-image-div:focus figcaption {
+#artComponent-image-div:hover figcaption,
+#artComponent-image-div:focus figcaption {
     opacity: 1;
 }
 
-#designerComponent-image-text-div{
+#artComponent-image-text-div{
     color: #fff;
     text-align: left;
     position: absolute;

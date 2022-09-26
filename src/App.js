@@ -21,7 +21,7 @@ import VideoPage from "./component/workComponent/videoTab";
 
 import DesignerPersonalPage from "./component/designComponent/js/designerPage";
 
-import TestPage from "./component/lab/labWindowing";
+import TestPage from "./component/lab/verticalScroll";
 
 function App() {
   const nav_style = {

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../css/designerPage.css";
 import ProductList from "./designerPageComponent";
 
-function App() {
+function App(props) {
   const [nameKor, setNameKor] = useState();
   const [nameEng, setNameEng] = useState();
   const [instagramId, setInstagramId] = useState();
@@ -40,14 +40,17 @@ function App() {
   };
   return (
     <div className="designer-page-div">
-      <div id="designer-pace-cancel">
-        <Link to="/designer" id="designer-page-cancel-link">
-          <img src="assets/img/cancel.png" id="designer-page-button"></img>
+      <div id="designer-page-cancel">
+        <div id="designer-page-cancel-link">
+        <Link to="/designer" >
+          <img src="assets/img/cancel.png" id="designer-page-button"/>
         </Link>
+        </div>
       </div>
 
       <div className="row">
-        <div className="col-4" id="designer-page-textBox">
+      <div className="col-1"></div>
+        <div className="col-3" id="designer-page-textBox">
           <div>
             <p id="designer-page-nameKor">{nameKor}</p>
             <p id="designer-page-nameEng">{nameEng}</p>

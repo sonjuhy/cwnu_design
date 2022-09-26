@@ -21,3 +21,10 @@
     display: flex;
     align-items: center;
 }
+#artComponentDouble-component{
+    margin-left: 5%;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}

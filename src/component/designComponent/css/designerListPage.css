@@ -1,0 +1,24 @@
+.designer-sub-div {
+    text-align: center;
+    padding-left: 5%;
+}
+.designer-sub-list-div {
+  padding: 20px;
+  padding-top: 10%;
+}
+#designer-sub-component{
+    /* margin-left: 5%; */
+    display: inline-block;
+    
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.designer-sub-list-div::-webkit-scrollbar{
+    display: none;
+}
+#designer-sub-person-component{
+    display: inline-block;
+}
+#designer-scrollDown-button{
+    cursor: pointer;
+}

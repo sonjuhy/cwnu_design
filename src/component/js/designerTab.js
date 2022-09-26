@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import "../css/designerTab.css";
 import Person from "./designerComponent";
 
+import CraftList from "../designComponent/js/designerCraftPage";
+import VisualList from "../designComponent/js/designerVisualPage";
+import ProductList from "../designComponent/js/designerProductPage";
+
 function App() {
   /**
    *
@@ -11,9 +15,6 @@ function App() {
   const [peopleList, setPeopleList] = useState([]);
   const [listLen, setListLen] = useState(0);
 
-  // useEffect(() => {
-  //   setPersonList(selected);
-  // },[selected]);
   const setPersonList = (e) => {
     const data = [
       "content100",
@@ -51,7 +52,7 @@ function App() {
       "content38",
       "content39",
     ];
-    let list = data;
+    let list = data3;
     if (selected === 1) {
       list = data1;
     } else if (selected === 2) {
@@ -63,7 +64,7 @@ function App() {
     }
     // setPeopleList(list);
     // setListLen(list.length);
-    const listTmp = list.map((item, index) => (
+    const listTmp = data3.map((item) => (
       <div key={item}>
         <Person krName={item} engName={item} />
       </div>
@@ -118,7 +119,20 @@ function App() {
         </div>
       </div>
       <div>
-        {setPersonList()}
+        {selected === 0 && (
+          <div className="designer-list-div">
+            {setPersonList()}
+          </div>
+        )}
+        {selected === 1 && (
+          <CraftList />
+        )}
+        {selected === 2 && (
+          <VisualList />
+        )}
+        {selected === 3 && (
+          <ProductList />
+        )}
       </div>
     </div>
   );

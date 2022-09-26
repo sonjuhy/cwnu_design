@@ -40,7 +40,7 @@ function App() {
             {selected === 'product' && (
               <div>
                 <Link to='/product' id='workCategory-linkTo'><p id='workCategory-sub'>제품 디자인</p></Link>
-                <Link to='/furniture' id='workCategory-linkTo'><p id='workCategory-sub'>환경 디자인</p></Link>
+                {/* <Link to='/furniture' id='workCategory-linkTo'><p id='workCategory-sub'>환경 디자인</p></Link> */}
               </div>
             )}
           </div>

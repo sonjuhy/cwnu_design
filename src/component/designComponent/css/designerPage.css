@@ -9,10 +9,13 @@
     background-attachment: fixed;
 }
 #designer-page-cancel{
-    display:flex;
+    padding-top: 5vh;
+    padding-bottom: 7vh;
+    display: flex;
 }
 #designer-page-cancel-link{
-    margin-left: 0, auto;
+    /* display: inline-block; */
+    margin-left: auto;
     cursor: pointer;
 }
 #designer-page-button{
@@ -20,37 +23,41 @@
     
 }
 #designer-page-textBox{
+    overflow: auto;
     display:grid;
     align-items:center;
 }
 #designer-page-nameKor{
     color: white;
     font-size: 45px;
-    
+    text-align: left;
 }
 #designer-page-nameEng{
     color: white;
     font-size: 25px;
-    /* text-align: left; */
+    text-align: left;
+    padding-bottom: 20%;
 }
 #designer-page-email{
     padding-top: 50px;
     display: flex;
-    justify-content: center;
+    text-align: left;
     color: white;
 }
 #designer-page-instagram{
     display: flex;
-    justify-content: center;
     color: white;
+    text-align: left;
 }
 #designer-page-icon{
     margin-left: 25px;
     width: 40px;
+    text-align: left;
 }
 #designer-page-icon-text {
     text-align: center;
     justify-content: center;
+    text-align: left;
 }
 #designer-page-component{
     margin-left: 5%;
