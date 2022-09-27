@@ -1,24 +1,27 @@
 import React, { useState, useEffect } from "react";
 import './css/productTab.css';
+import axios from "axios";
 import Footer from "../js/footer"
 import ArtComponent from "./artComponent/js/artComponent";
 
  function App() {
 
-  const data = [
-    {krName: "content21", productName: "product1"},
-    {krName: "content22", productName: "product2"},
-    {krName: "content23", productName: "product3"},
-    {krName: "content24", productName: "product4"},
-    {krName: "content25", productName: "product5"},
-    {krName: "content26", productName: "product6"},
-    {krName: "content27", productName: "product7"},
-    {krName: "content28", productName: "product8"},
-    {krName: "content29", productName: "product9"},
-  ];
+  const [list, setList] = useState([]);
+  useEffect(() =>{
+    settingData();
+  },[]);
+  const settingData = async () => {
+    const {data} = await axios({
+      method: 'get',
+      url: 'http://localhost:8080/productList',
+    });
+    
+    setList(data);
+  };
+
 
   const setProductList = () => { //Single component
-    const listTmp = data.map((data, index) => (
+    const listTmp = list.map((data, index) => (
       <div key={data.krName}>
         <ArtComponent productName={data.productName} krName={data.krName} />
       </div>

@@ -1,24 +1,8 @@
 import React, { useState, useEffect, useRef, useSelector, useCallback } from "react";
 import "../css/designerListPage.css";
 import Person from "../../js/designerComponent";
+import axios from "axios";
 
-import ScrollHorizontal from "react-scroll-horizontal";
-
-const data = [
-  "content100",
-  "content200",
-  "content300",
-  "content400",
-  "content500",
-];
-
-let list = [
-  { name: "list1" },
-  { name: "list2" },
-  { name: "list3" },
-  { name: "list4" },
-  { name: "list5" },
-]; // 임시데이터 선언
 
 export function useHorizontalScroll() {
   const elRef = useRef();
@@ -41,28 +25,27 @@ export function useHorizontalScroll() {
 }
 
 function App() {
-  /**
-   *
-   * get data from db
-   */
+
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    settingData();
+  }, []);
+  const settingData = async () => {
+    const { data } = await axios({
+      method: "get",
+      url: "http://localhost:8080/visualList",
+    });
+
+    setList(data);
+  };
 
   const scrollRef = useHorizontalScroll();
   const verticalScrollRef = useRef();
 
-  const [peopleList, setPeopleList] = useState([]);
-  const [listLen, setListLen] = useState(0);
-  const data = [
-    "content100",
-    "content200",
-    "content300",
-    "content400",
-    "content500",
-  ];
-
   const setPersonList = (e) => {
-    const listTmp = data.map((item) => (
+    const listTmp = list.map((item) => (
       <div id="designer-sub-person-component" key={item}>
-        <Person krName={item} engName={item} />
+        <Person krName={item.krName} engName={item.engName} />
       </div>
     ));
     return <div id="designer-sub-component">{listTmp}</div>;
