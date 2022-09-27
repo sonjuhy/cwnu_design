@@ -1,8 +1,30 @@
 import React, { useState, useEffect } from "react";
 import './css/packageTab.css';
 import Footer from "../js/footer"
+import ArtComponent from "./artComponent/js/artComponent";
 
  function App() {
+
+  const data = [
+    {krName: "content21", productName: "product1"},
+    {krName: "content22", productName: "product2"},
+    {krName: "content23", productName: "product3"},
+    {krName: "content24", productName: "product4"},
+    {krName: "content25", productName: "product5"},
+    {krName: "content26", productName: "product6"},
+    {krName: "content27", productName: "product7"},
+    {krName: "content28", productName: "product8"},
+    {krName: "content29", productName: "product9"},
+  ];
+
+  const setPackageList = () => { //Single component
+    const listTmp = data.map((data, index) => (
+      <div key={data.krName}>
+        <ArtComponent productName={data.productName} krName={data.krName} />
+      </div>
+    ));
+    return <div id="artComponent-component">{listTmp}</div>;
+  }
     return (
       <div className='package-main-div'>
         <div className='row' id="head">
@@ -14,6 +36,9 @@ import Footer from "../js/footer"
             <div className='col-4' id='head-title-sub-container'>
                 <p id='head-title-sub'>패키지 디자인</p>
             </div>
+        </div>
+        <div id="artComponent-container">
+            {setPackageList()}
         </div>
         <Footer/>
       </div>

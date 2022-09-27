@@ -21,7 +21,7 @@ function App(props) {
         <div id="artComponent-image-div">
           <figure>
             <img src="assets/img/person_sample.png" alt="person_sample" />
-            <figcaption>
+            <figcaption id="artComponent-image-figcaption-div">
               <div id="artComponent-image-text-div">{productName}</div>
             </figcaption>
           </figure>

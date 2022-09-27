@@ -13,14 +13,16 @@ function App(props) {
   const [name, setName] = useState(props.krName);
 
   return (
-    <div id="artComponent-main-div" ref={setTarget}>
-        <p>{name}</p>
+    <div id="artComponentVideo-main-div" ref={setTarget}>
+      <div >
+        <p id="artComponentVideo-component-title">{name}</p>
+      </div>
       <Fade bottom>
-        <div id='artComponent-image-div'>
+        <div id='artComponentVideo-image-div'>
         <figure>
             <img src="assets/img/person_sample.png" alt="person_sample" />
-            <figcaption>
-              <div id="artComponent-image-text-div">
+            <figcaption  id="artComponentVideo-image-figcaption-div">
+              <div id="artComponentVideo-image-text-div">
                 {productName}
               </div>
             </figcaption>
