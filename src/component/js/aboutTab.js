@@ -1,58 +1,85 @@
-import { React, useState } from 'react';
-import { Parallax } from 'react-parallax';
-import { Timeline, Tween } from 'react-gsap';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Animation1 from "./Animtaion1";
-/**
- * 
- * use Intersection Observer API
- */
-//  const boxStyle = css`
-//  width: 50px; 
-//  height: 50px; 
-//  border-radius: 100%;
-//  background: #bf5160;
-//  opacity: 0;
-// `
+import { React, useEffect, useState, useRef } from 'react';
+import '../css/aboutTab.css';
 
 function App() {
-  const [pageIdx] = useState(0);
+  const boxRef = useRef(null);
+  const [ScrollY, setScrollY] = useState(0);
+  const [ScrollActive, setScrollActive] = useState(false);
 
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.utils.toArray("section").forEach((section, i) => {
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top top",
-      pin: true,
-      pinSpacing: false,
-    });
-  });
-  ScrollTrigger.create({
-    snap: 1 / 4
-  });
+  function logit() {
+    setScrollY(boxRef.current.scrollTop);
+    if (boxRef.current.scrollTop > 30) {
+      setScrollActive(true);
+    } else {
+      setScrollActive(false);
+    }
+  }
+
+  // useEffect(() => {
+  //   function watchScroll() {
+  //     boxRef.current.addEventListener("scroll", logit);
+  //   }
+  //   watchScroll();
+  //   return () => {
+  //     boxRef.current.removeEventListener("scroll", logit);
+  //   };
+  // });
+
   return (
-    <div className='main-div'>
-      <div>
-        <Animation1 />
-        <hr />
-      </div>
-      <div className='section-container'>
-        <section className="section01">
-          <h1>section01</h1>
-        </section>
-        <section className="section02">
-          <h1>section02</h1>
-        </section>
-        <section className="section03">
-          <h1>section03</h1>
-        </section>
-        <section className="section04">
-          <h1>section04</h1>
-        </section>
-        <section className="section05">
-          <h1>section05</h1>
-        </section>
+    <div className='about-main-div'>
+      {/* <div className="content1">
+        <div className="header">
+            Header1
+        </div>
+        content1
+    </div>
+
+    <div className="content2">
+        <div className="header">
+            Header2
+        </div>
+        content2
+    </div> */}
+      <div id="about-body-div">
+        <div id="about-block-114">
+          <div id="about-block-140">
+            <img className='about-img' id="about-img-1_s" src='assets/img/info_exhibition.png'/>
+            <img className='about-img' id="about-img-2_s" src='assets/img/info_place.png'/>
+          </div>
+        </div>
+        <hr/>
+        <div>
+          <img src="assets/img/logo_black.png"/>
+          <p>ABOUT</p>
+          <p>Exhibition</p>
+          <div className='row'>
+            <div className='col-6'>image div</div>
+            <div className='col-6'>scroll up button</div>
+          </div>
+        </div>
+        <hr/>
+        <div>
+          <img src="assets/img/logo_white.png"/>
+          <p>CREDIT</p>
+          <img src="assets/img/logo_black.png"/>
+          <div>
+            <p>졸업준비위원회</p>
+          </div>
+          <div>
+            <p>지도교수</p>
+          </div>
+          <div className='row'>
+            <div className='col-4'>
+              <p>PRODUCT</p>
+            </div>
+            <div className='col-4'>
+              <p>VISUAL</p>
+            </div>
+            <div className='col-4'>
+              <p>CRAFT</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
