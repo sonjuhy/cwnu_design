@@ -20,6 +20,14 @@ import ProductPage from "./component/workComponent/productTab";
 import VideoPage from "./component/workComponent/videoTab";
 
 import DesignerPersonalPage from "./component/designComponent/js/designerPage";
+import WorkPersonalPage from "./component/personalComponent/js/commonComponent";
+
+import KimyeonghaComponetPage from "./component/personalComponent/js/kimyeonghaComponet";
+import MoonBoEunComponentPage from "./component/personalComponent/js/moonboeunComponent";
+import SimSeongHyeonComponentPage from "./component/personalComponent/js/simseonghyeonComponent";
+import LeeYuRimComponentPage from "./component/personalComponent/js/leeyurimComponent";
+import BaeSuHyeonComponentPage from "./component/personalComponent/js/baesuhyeonComponent";
+import ShinYeRinComponentPage from "./component/personalComponent/js/shinyerinComponent";
 
 import TestPage from "./component/lab/verticalScroll";
 
@@ -114,6 +122,13 @@ function App() {
           <Route path="/video" element={<VideoPage />} />
           <Route path="/design_personal" element={<DesignerPersonalPage/>}/>
           <Route path="/test" element={<TestPage/>}/>
+          <Route path="/work_personal" element={<WorkPersonalPage/>}/>
+          <Route path="/kimyeongha" element={<KimyeonghaComponetPage  />}/>
+          <Route path="/moonboeun" element={<MoonBoEunComponentPage/>}/>
+          <Route path="/simseonghyeon" element={<SimSeongHyeonComponentPage/>}/>
+          <Route path="/leeyurim" element={<LeeYuRimComponentPage/>}/>
+          <Route path="/baesuhyeon" element={<BaeSuHyeonComponentPage />}/>
+          <Route path="/shinyerin" element={<ShinYeRinComponentPage />}/>
         </Routes>
       </div>
     </div>

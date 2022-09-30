@@ -1,0 +1,22 @@
+#shinyerin-main-div{
+    text-align: center;
+}
+#shinyerin-img-div{
+    width: 100vw;
+    background-image: url(../../../../public/assets/img/personal/visual/video/ShinYeRin/ShinYeRin_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: -5px;
+}
+#shinyerin-img{
+    width: 100vw;
+}
+#shinyerin-gif{
+    width: 85%;
+    height: 85%;
+    /* padding-top: 5%;
+    padding-bottom: 5%; */
+}
+#shinyerin-bg{
+    background-color: #223664;
+}

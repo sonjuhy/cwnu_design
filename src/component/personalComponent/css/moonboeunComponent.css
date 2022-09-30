@@ -1,0 +1,32 @@
+#moonboeun-main-div{
+    text-align: center;
+    
+}
+#moonboeun-img-div{
+    width: 100vw;
+    background-color: black;
+}
+#personal-img{
+    width: 100vw;
+}
+#personal-video{
+    width: 95%;
+    /* width: 100vw; */
+}
+#personal-img-background{
+    width: 100vw;
+    /* position: relative; */
+}
+#personal-video-container{
+    margin:0% !important;
+    padding:0% !important;
+}
+#personal-video-front{
+    /* object-fit: cover; */
+    height: 100%;
+    width: 100%;
+    /* position: absolute; */
+}
+#personal-profile-div{
+    background-color: white;
+}

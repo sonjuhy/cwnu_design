@@ -43,6 +43,7 @@
 #workCategory-sub-container{
     display: flex;
     align-items: center;
+    text-align: left;
 }
 #workCategory-sub-blink{
     height: 100px;

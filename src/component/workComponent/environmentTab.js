@@ -3,6 +3,7 @@ import './css/environmentTab.css';
 import Footer from "../js/footer"
 import ArtComponentDouble from "./artComponent/js/artComponentDouble"
 import axios from "axios";
+import { Link } from "react-router-dom";
 
  function App() {
   const [list, setList] = useState([]);
@@ -12,7 +13,7 @@ import axios from "axios";
   const settingData = async () => {
     const { data } = await axios({
       method: "get",
-      url: "http://localhost:8080/visualList",
+      url: "http://localhost:8080/craftList",
     });
 
     setList(data);
@@ -21,7 +22,9 @@ import axios from "axios";
   const setEnvironmentList = () => { //Double component
     const listTmp = list.map((data, index) => (
       <div key={data.krName}>
-        <ArtComponentDouble productName={data.productName} krName={data.krName} />
+        <Link to={'/work_personal'}>
+          <ArtComponentDouble productName={data.productName} krName={data.krName} />
+        </Link>
       </div>
     ));
     return <div id="artComponentDouble-component">{listTmp}</div>;

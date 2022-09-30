@@ -1,5 +1,5 @@
-import { React, useEffect, useState, useRef } from 'react';
-import '../css/aboutTab.css';
+import { React, useEffect, useState, useRef } from "react";
+import "../css/aboutTab.css";
 
 function App() {
   const boxRef = useRef(null);
@@ -26,7 +26,7 @@ function App() {
   // });
 
   return (
-    <div className='about-main-div'>
+    <div className="about-main-div">
       {/* <div className="content1">
         <div className="header">
             Header1
@@ -40,45 +40,80 @@ function App() {
         </div>
         content2
     </div> */}
+
       <div id="about-body-div">
-        <div id="about-block-114">
-          <div id="about-block-140">
-            <img className='about-img' id="about-img-1_s" src='assets/img/info_exhibition.png'/>
-            <img className='about-img' id="about-img-2_s" src='assets/img/info_place.png'/>
-          </div>
-        </div>
-        <hr/>
         <div>
-          <img src="assets/img/logo_black.png"/>
+          <img src="assets/img/about-movingposter.gif"></img>
+        </div>
+        <hr />
+        <div id="about-block-114"></div>
+        <hr />
+        <div>
+          <img src="assets/img/logo_black.png" />
           <p>ABOUT</p>
           <p>Exhibition</p>
-          <div className='row'>
-            <div className='col-6'>image div</div>
-            <div className='col-6'>scroll up button</div>
+          <div className="row">
+            <div className="col-6">
+              <div id="about-block-140">
+                <img
+                  className="about-img"
+                  id="about-img-1_s"
+                  src="assets/img/info_exhibition.png"
+                />
+                <img
+                  className="about-img"
+                  id="about-img-2_s"
+                  src="assets/img/trans.png"
+                />
+              </div>
+            </div>
+            <div className="col-6">
+              <div id="about-block-140">
+                <img
+                  className="about-img"
+                  id="about-img-1_s"
+                  src="assets/img/button_scroll_black.png"
+                />
+                <img
+                  className="about-img"
+                  id="about-img-2_s"
+                  src="assets/img/info_exhibition.png"
+                />
+                {/* <img
+                  className="about-img"
+                  id="about-img-2_s"
+                  src="assets/img/info_place.png"
+                /> */}
+              </div>
+            </div>
           </div>
         </div>
-        <hr/>
+        <hr />
         <div>
-          <img src="assets/img/logo_white.png"/>
+          <img src="assets/img/logo_white.png" />
           <p>CREDIT</p>
-          <img src="assets/img/logo_black.png"/>
+          <img src="assets/img/logo_black.png" />
           <div>
             <p>졸업준비위원회</p>
           </div>
           <div>
             <p>지도교수</p>
           </div>
-          <div className='row'>
-            <div className='col-4'>
+          <div className="row">
+            <div className="col-4">
               <p>PRODUCT</p>
             </div>
-            <div className='col-4'>
+            <div className="col-4">
               <p>VISUAL</p>
             </div>
-            <div className='col-4'>
+            <div className="col-4">
               <p>CRAFT</p>
             </div>
           </div>
+        </div>
+        <div>
+          <p>2022 CHANGWON NATIONAL UNIVERSITY INDUSTRIAL</p>
+          <p>@CWNU.GRADSHOW</p>
         </div>
       </div>
     </div>

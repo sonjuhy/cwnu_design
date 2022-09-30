@@ -12,7 +12,7 @@ import ArtVideoComponent from "./artComponent/js/artComponentVideo";
   const settingData = async () => {
     const {data} = await axios({
       method: 'get',
-      url: 'http://localhost:8080/craftList',
+      url: 'http://localhost:8080/visualList',
     });
     
     setList(data);

@@ -1,0 +1,16 @@
+#simseonghyeon-main-div{
+    text-align: center;
+}
+#simseonghyeon-img-div{
+    width: 100vw;
+    background-color: black;
+}
+#personal-img{
+    width: 100vw;
+}
+#personal-gif{
+    width: 80%;
+    height: 90%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
