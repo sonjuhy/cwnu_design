@@ -21,6 +21,7 @@
 #designerComponent-image-div img {
     width: 100%;
     height: 100%;
+    padding-right: 10%;
 }
 
 #designerComponent-image-div figcaption {
@@ -38,6 +39,7 @@
     /* 처음엔 안보이고 */
 
     transition: 0.3s;
+    z-index: 3;
 }
 
 #designerComponent-image-div:hover figcaption,
@@ -50,4 +52,8 @@
     text-align: left;
     position: absolute;
     bottom: 0px;
+}
+#designerComponent-img-figcaption{
+    width: 300px;
+    /* padding-right: 10%; */
 }

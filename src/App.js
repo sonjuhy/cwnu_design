@@ -5,11 +5,11 @@ import { Route, Routes } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 
-import MainPage from "./component/js/mainTab";
-import DesignerPage from "./component/js/designerTab";
-import GuestPage from "./component/js/guestTab";
-import AboutPage from "./component/js/aboutTab";
-import WorkPage from "./component/js/workTab";
+import MainPage from "./component/mainComponent/js/mainTab";
+import DesignerPage from "./component/mainComponent/js/designerTab";
+import GuestPage from "./component/mainComponent/js/guestTab";
+import AboutPage from "./component/mainComponent/js/aboutTab";
+import WorkPage from "./component/mainComponent/js/workTab";
 
 import AccessoriesPage from "./component/workComponent/accessoriesTab";
 import EnvironmentPage from "./component/workComponent/environmentTab";

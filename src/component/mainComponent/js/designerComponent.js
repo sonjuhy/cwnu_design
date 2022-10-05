@@ -2,22 +2,31 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Fade from 'react-reveal/Fade';
 import "../css/designerComponent.css";
+import axios from "axios";
 
 function App(props) {
-  /**
-   * 
-   * get data from db
-   */
-  const [target, setTarget] = useState(null);
 
+  const [target, setTarget] = useState(null);
+  const [list, setList] = useState([]);
+  const [profileImgPath, setProfileImgPath] = useState('assets/img/sample.png');
+  const [imgPath, setImgPath] = useState('assets/img/sample.png');
+  
   const text = `${props.krName}\n${props.engName}`;
+  const studyNum = props.studyNum;
+
+  useEffect(() => {
+    settingData();
+  })
+  const settingData = () => {
+    setImgPath(`assets/img/personal/profileCut/${studyNum}.jpg`);
+  };
 
   return (
     <div id="designerComponent-main-div" ref={setTarget}>
       <Fade bottom>
         <div id='designerComponent-image-div'>
-        <figure>
-            <img src="assets/img/person_sample.png" alt="person_sample" />
+        <figure id="designerComponent-img-figcaption">
+            <img src={imgPath} alt="person_sample" />
             <figcaption>
               <div id="designerComponent-image-text-div">
                 {text}

@@ -1,27 +1,54 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Fade from 'react-reveal/Fade';
 import "../css/artComponent.css";
+import axios from "axios";
 
 function App(props) {
-  /**
-   * 
-   * get data from db
-   */
-  const [target, setTarget] = useState(null);
+
+  const target = useRef();
   const [productName, setProductName] = useState(props.productName);
   const [name, setName] = useState(props.krName);
+  const [partName, setPartName] = useState(props.partName);
+  const [engName, setEngName] = useState(props.engName);
+  const [imgPath, setImgPath] = useState('assets/img/sample.png');
+  
+  useEffect(()=>{
+    settingEnvironment();
+    const engNameTmp = props.engName.replaceAll('_','-');
+    if(partName === '가구'){
+      setImgPath(`assets/img/productImg/craft/environment/normal/${engNameTmp}_1.png`);
+    }
+    else if(partName === '금속가구'){
+      setImgPath(`assets/img/productImg/craft/environment/metal/${engNameTmp}_1.png`);
+    }
+    else if(partName === '포스터1'){
+      setImgPath(`assets/img/productImg/visual/poster/poster1/${engNameTmp}_1.png`);
+    }
+    else if(partName === '포스터2'){
+      setImgPath(`assets/img/productImg/visual/poster/poster2/${engNameTmp}_1.png`);
+    }
+  })
+  
+  const settingEnvironment = async () => {
+    const { data } = await axios({
+      method: "get",
+      url: "http://localhost:8080/productPerson/"+name,
+    });
+    for(var i=0; i<data.length; i++){
+      if(data[i].subPart === partName){
+        setProductName(data[i].name);
+        break;
+      }
+    }
+  };
 
   return (
-    <div id="artComponent-main-div" ref={setTarget}>
-      <div >
-        <p id="artComponent-component-title">{name}</p>
-      </div>
+    <div id="artComponent-main-div" ref={target}>
       <Fade bottom>
-        <div id="artComponent-image-double-div">
-        <div id='artComponent-image-div'>
+      <div id='artComponent-image-div'>
         <figure>
-            <img src="assets/img/person_sample.png" alt="person_sample" />
+            <img src={imgPath} alt="person_sample" />
             <figcaption id="artComponent-image-figcaption-div">
               <div id="artComponent-image-text-div">
                 {productName}
@@ -29,18 +56,6 @@ function App(props) {
             </figcaption>
         </figure>
         </div>
-        <div id='artComponent-image-div'>
-        <figure>
-            <img src="assets/img/person_sample.png" alt="person_sample" />
-            <figcaption id="artComponent-image-figcaption-div">
-              <div id="artComponent-image-text-div">
-                {productName}
-              </div>
-            </figcaption>
-        </figure>
-        </div>
-        </div>
-        
       </Fade>
     </div>
   );

@@ -6,12 +6,13 @@
     text-align: center;
     width: 100%;
     height: 100vh;
-    background-image: url(../../../public/assets/img/category_bg.jpg);
+    background-image: url(../../../../public/assets/img/category_bg.jpg);
     background-repeat: repeat;
     background-position: top center;
     background-size: cover;
     background-attachment: fixed;
     overflow: hidden;
+    /* position: relative; */
 }
 .designer-list-div {
     text-align: center;
@@ -24,6 +25,7 @@
 }
 #designer-head{
     padding-top: 20px;
+    /* padding-bottom: 10%; */
 }
 #designer-head-sub-line {
     border-right: 2px solid white;
@@ -58,4 +60,5 @@
     row-gap: 10px;
     column-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
+    /* position: relative; */
 }

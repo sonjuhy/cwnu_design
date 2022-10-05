@@ -10,17 +10,24 @@ function App(props) {
    */
   const [target, setTarget] = useState(null);
   const [productLen, setProductLen] = useState(2);
-  const [imageSrc, setImageSrc] = useState("");
+  const [imageSrc, setImageSrc] = useState("assets/img/sample.png");
 
   const text = `${props.productName}`;
   const imgSrc = "assets/img/person_sample.png";
   const imgWidth = "50px";
+
+  useEffect(() => {
+    settingData(props.productImgPath);
+  })
+  const settingData = (el) => {
+    setImageSrc(el);
+  };
   return (
     <div id="designerPageComponent-main-div">
       <Fade bottom>
         <div id='designerPageComponent-image-div'>
         <figure>
-            <img src={imgSrc} alt="person_sample"/>
+            <img src={imageSrc} alt="person_sample"/>
             <figcaption>
               <div id="designerPageComponent-image-text-div">
                 {text}

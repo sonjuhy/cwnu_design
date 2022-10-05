@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './css/furnitureTab.css';
-import Footer from "../js/footer"
+import Footer from "../mainComponent/js/footer"
 
  function App() {
     return (

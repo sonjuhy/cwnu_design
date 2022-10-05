@@ -1,30 +1,30 @@
 .accessories-main-div {
     text-align: center;
 }
-#head{
+#accessories-head{
     border-bottom: 2px solid black;
 }
-#head-title-line {
+#accessories-head-title-line {
     border-right: 2px solid black;
 }
-#head-title{
+#accessories-head-title{
     color: black;
     font-size: 25px;
     float: right;
 }
-#head-title-sub {
+#accessories-head-title-sub {
     color: gray;
     font-size: 15px;
     float: left;
 }
-#head-title-sub-container {
+#accessories-head-title-sub-container {
     display: flex;
     align-items: center;
 }
-#artComponent-container{
+#accessories-artComponent-container{
     padding: 5%;
 }
-#artComponent-component{
+#accessories-artComponent-component{
     margin-left: 5%;
     display: grid;
     row-gap: 10px;

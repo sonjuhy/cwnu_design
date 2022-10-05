@@ -2,13 +2,16 @@ import React, { useState, useEffect } from "react";
 import "../css/designerTab.css";
 import Person from "./designerComponent";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-import CraftList from "../designComponent/js/designerCraftPage";
-import VisualList from "../designComponent/js/designerVisualPage";
-import ProductList from "../designComponent/js/designerProductPage";
+import CraftList from "../../designComponent/js/designerCraftPage";
+import VisualList from "../../designComponent/js/designerVisualPage";
+import ProductList from "../../designComponent/js/designerProductPage";
+import LoadingPage from "../../loadingComponent/js/loadingPage";
+
 
 function App() {
-
+  const [loading, setLoading] = useState(true);
    const [list, setList] = useState([]);
    useEffect(() => {
      settingData();
@@ -21,18 +24,42 @@ function App() {
  
      setList(data);
    };
-
+   useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false);
+    }, 3000);
+    return () =>{
+      console.log("LoadingPage down");
+    }
+   },[]);
   const [selected, setSelected] = useState(0);
 
   const setPersonList = (e) => {
     const listTmp = list.map((item) => (
-      <div key={item}>
-        <Person krName={item.krName} engName={item.engName} />
+      <div key={item.id}>
+        <Link to='/design_personal' state={{
+          engName: item.engName,
+          partName: changeEngToKorPart(item.part),
+          studyNum: item.num
+        }}>
+          <Person krName={item.krName} engName={item.engName} studyNum={item.num} />
+        </Link>
       </div>
     ));
-    return <div id="designer-component">{listTmp}</div>;
+    return <div id="designer-component" style={{paddingBottom:'10%'}}>{listTmp}</div>;
   };
-
+  const changeEngToKorPart = (el) => {
+    if(el === '공예'){
+      return 'craft/craft';
+    }
+    else if(el === '시각'){
+      return 'visual/visual';
+    }
+    else if(el === '제품'){
+      return 'product/product';
+    }
+    
+  }
   const changeSelected = (e) => {
     setSelected(e);
     console.log("setPersonList2 : " + e);
@@ -40,6 +67,7 @@ function App() {
 
   return (
     <div className="designer-main-div">
+      {loading ? <LoadingPage/> : null}
       <div className="row" id="designer-head">
         <div className="col-6">
           <p id="designer-head-title" onClick={() => setSelected(0)} style={{cursor: 'pointer'}}>DESIGNER</p>
@@ -79,7 +107,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div>
+      <div style={{paddingBottom:'10%'}}>
         {selected === 0 && (
           <div className="designer-list-div">
             {setPersonList()}
@@ -94,6 +122,7 @@ function App() {
         {selected === 3 && (
           <ProductList />
         )}
+        
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef, useSelector, useCallback } from "react";
 import "../css/designerListPage.css";
-import Person from "../../js/designerComponent";
+import Person from "../../mainComponent/js/designerComponent";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 export function useHorizontalScroll() {
@@ -38,21 +39,26 @@ function App() {
 
     setList(data);
   };
-
   const scrollRef = useHorizontalScroll();
   const verticalScrollRef = useRef();
 
   const setPersonList = (e) => {
     const listTmp = list.map((item) => (
-      <div id="designer-sub-person-component" key={item}>
-        <Person krName={item.krName} engName={item.engName} />
+      <div id="designer-sub-person-component" key={item.id}>
+        <Link to='/design_personal' state={{
+          engName: item.engName,
+          partName: 'craft/craft',
+          studyNum: item.num
+        }}>
+          <Person krName={item.krName} engName={item.engName} studyNum={item.num}/>
+        </Link>
       </div>
     ));
     return <div id="designer-sub-component">{listTmp}</div>;
   };
 
   const buttonClick = () => {
-    verticalScrollRef.current.scrollIntoView({ behavior: 'smooth', Inline: 'start' });
+    verticalScrollRef.current.scrollIntoView({ behavior: 'smooth',block: 'end' ,inline: 'start' });
   };
 
   return (
@@ -62,7 +68,7 @@ function App() {
         ref={scrollRef}
         style={{ overflow: "auto" }}
       >
-        <div ref={verticalScrollRef} style={{ whiteSpace: "nowrap" }}>
+        <div ref={verticalScrollRef} style={{ whiteSpace: "nowrap"}}>
             {setPersonList()}</div>
       </div>
       <div>
