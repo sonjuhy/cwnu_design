@@ -28,6 +28,16 @@ import SimSeongHyeonComponentPage from "./component/personalComponent/js/simseon
 import LeeYuRimComponentPage from "./component/personalComponent/js/leeyurimComponent";
 import BaeSuHyeonComponentPage from "./component/personalComponent/js/baesuhyeonComponent";
 import ShinYeRinComponentPage from "./component/personalComponent/js/shinyerinComponent";
+import KimjoEeComponentPage from "./component/personalComponent/js/KimJoAeComponent";
+import ParkjinHyeongComponentPage from "./component/personalComponent/js/ParkJinHyeongComponent";
+import LeeSeonHwaComponentPage from "./component/personalComponent/js/LeeSeonHwaComponent";
+import LeeYuJinComponentPage from './component/personalComponent/js/LeeYuJinComponent';
+import KimhyukjinComponentPage from "./component/personalComponent/js/KimHyukJinComponent";
+import ParkseongWookComponentPage from "./component/personalComponent/js/ParkSeongWookComponent";
+import ShindayoungComponentPage from "./component/personalComponent/js/ShinDaYoungComponent";
+import LeeJuhyeonComponentPage from "./component/personalComponent/js/LeeJuHyeonComponent";
+import ChoihayoungComponentPage from "./component/personalComponent/js/ChoiHaYoungComponent";
+import HongsunkyungComponentPage from "./component/personalComponent/js/HongSunKyungComponent";
 
 import TestPage from "./component/lab/verticalScroll";
 
@@ -55,31 +65,35 @@ function App() {
             <Link to="/">
               <img
                 alt=""
-                src="assets/img/logo_black.png"
-                width="80"
+                src="assets/img/main_black_logo.png"
+                width="170"
                 height="80"
                 className="d-inline-block align-top"
               />
             </Link>
           </div>
-          <div className="col-11">
+          <div className="col-11" >
             <Navbar bg="transparent" expand="lg">
               <Container style={nav_style}>
                 <Navbar.Brand></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse
                   id="basic-navbar-nav"
-                  className="justify-content-end"
+                  // className="justify-content-end"
+                  style={{justifyContent: 'space-between'}}
                 >
+                  <div></div>
+                  <div></div>
                   <Navbar.Text id="navbar-link">
-                    <Link to="about">ABOUT</Link>
+                    <Link to="about" style={{fontFamily:'pretendard-semibold', textDecoration:'none', fontSize:'250%'}}>ABOUT</Link>
                   </Navbar.Text>
                   <Navbar.Text id="navbar-link">
-                    <Link to="designer">DESIGNER</Link>
+                    <Link to="designer" style={{fontFamily:'pretendard-semibold', textDecoration:'none', fontSize:'250%'}}>DESIGNER</Link>
                   </Navbar.Text>
                   <Navbar.Text id="navbar-link">
-                    <Link to="work">WORK</Link>
+                    <Link to="work" style={{fontFamily:'pretendard-semibold', textDecoration:'none', fontSize:'250%'}}>WORK</Link>
                   </Navbar.Text>
+                  <div>
                   <Navbar.Text id="navbar-link">
                     <Link to="guest">
                       <img
@@ -102,6 +116,8 @@ function App() {
                       />
                     </a>
                   </Navbar.Text>
+                  </div>
+                  
                 </Navbar.Collapse>
               </Container>
             </Navbar>
@@ -129,6 +145,16 @@ function App() {
           <Route path="/leeyurim" element={<LeeYuRimComponentPage/>}/>
           <Route path="/baesuhyeon" element={<BaeSuHyeonComponentPage />}/>
           <Route path="/shinyerin" element={<ShinYeRinComponentPage />}/>
+          <Route path="/kimjoae" element={<KimjoEeComponentPage/>}/>
+          <Route path="/parkjinhyeong" element={<ParkjinHyeongComponentPage/>}/>
+          <Route path="/leeseonhwa" element={<LeeSeonHwaComponentPage/>}/>
+          <Route path="/leeyujin" element={<LeeYuJinComponentPage/>}/>
+          <Route path="/kimhyukjin" element={<KimhyukjinComponentPage/>}/>
+          <Route path="/parkseongwook" element={<ParkseongWookComponentPage/>}/>
+          <Route path="/shindayoung" element={<ShindayoungComponentPage/>}/>
+          <Route path="/leejuhyeon" element={<LeeJuhyeonComponentPage/>}/>
+          <Route path="/choihayoung" element={<ChoihayoungComponentPage/>}/>
+          <Route path="/hongsunkyung" element={<HongsunkyungComponentPage/>}/>
         </Routes>
       </div>
     </div>

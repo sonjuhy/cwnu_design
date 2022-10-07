@@ -13,12 +13,12 @@ function App() {
   };
   return (
     <div className="workTab-main-div">
-      <div className="row">
+      <div className="row" style={{paddingTop:'5%'}}>
         <div className="col-6">
           <div id="workCategory-logo">
             <img
-              src="assets/img/logo_white.png"
-              width="200px"
+              src="assets/img/work_white_logo.png"
+              width="132px"
               alt="white_logo"
             />
           </div>
@@ -27,7 +27,7 @@ function App() {
       </div>
 
       <div className="row">
-        <div className="col-6">
+        <div className="col-6" id="workCategory-menulist">
           <hr id="workline-left" />
           <p id="workCategory" onClick={() => onChangeSelected("craft")}>
             CRAFT
@@ -40,8 +40,9 @@ function App() {
           </p>
         </div>
         <div className="col-6" id="workCategory-sub-container">
+          <span id="workCategory-middle-line"></span>
           {selected === "craft" && (
-            <div>
+            <div style={{marginLeft: '8%'}}>
               <Link to="/environment" id="workCategory-linkTo">
                 <p id="workCategory-sub">가구 디자인</p>
               </Link>
@@ -51,7 +52,7 @@ function App() {
             </div>
           )}
           {selected === "visual" && (
-            <div>
+            <div style={{marginLeft: '8%'}}>
               <Link to="/video" id="workCategory-linkTo">
                 <p id="workCategory-sub">영상 디자인</p>
               </Link>
@@ -64,7 +65,7 @@ function App() {
             </div>
           )}
           {selected === "product" && (
-            <div>
+            <div style={{marginLeft: '8%'}}>
               <Link to="/product" id="workCategory-linkTo">
                 <p id="workCategory-sub">제품 디자인</p>
               </Link>

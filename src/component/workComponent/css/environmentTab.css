@@ -1,4 +1,5 @@
 .environment-main-div {
+    /* margin-top: 1%; */
     text-align: center;
 }
 #environment-head{
@@ -9,13 +10,19 @@
 }
 #environment-head-title{
     color: black;
-    font-size: 25px;
+    font-size: 30px;
     float: right;
+    margin-top: 1rem;
+    margin-bottom: 0%;
+    font-family: 'pretendard-medium';
 }
 #environment-head-title-sub {
     color: gray;
-    font-size: 15px;
+    font-size: 20px;
     float: left;
+    margin-top: 1rem;
+    margin-bottom: 0%;
+    font-family: 'pretendard-light';
 }
 #environment-head-title-sub-container {
     display: flex;
@@ -30,5 +37,10 @@
 }
 #environment-list-title{
     text-align: left;
-    padding-top: 5%;
+    padding-top: 3%;
+}
+
+#environment-list-text{
+    font-family: 'pretendard-medium';
+    font-size: 20px;
 }

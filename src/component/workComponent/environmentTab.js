@@ -35,7 +35,7 @@ function App() {
     const listTmp = list.map((data, index) => (
       <div key={data.krName}>
         <div id="environment-list-title">
-          <p>{data.krName}</p>
+          <p id="environment-list-text">{data.krName}</p>
         </div>
         <div className="row">
           <div className="col-6">

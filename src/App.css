@@ -37,9 +37,26 @@ html, body{
   float: right;
 
   color: #FFF;
+  font-family: 'pretendard-medium';
 }
 #nav-div{
   height: 20%;
   margin-left: 3%;
   position: relative;
+}
+@font-face{
+  font-family: 'pretendard-light';
+  src: url('./assets/font/Pretendard-Light.ttf');
+}
+@font-face{
+  font-family: 'pretendard-medium';
+  src: url('./assets/font/Pretendard-Medium.ttf');
+}
+@font-face{
+  font-family: 'pretendard-semibold';
+  src: url('./assets/font/Pretendard-SemiBold.ttf');
+}
+@font-face{
+  font-family: 'pretendard-thin';
+  src: url('./assets/font/Pretendard-Thin.ttf');
 }

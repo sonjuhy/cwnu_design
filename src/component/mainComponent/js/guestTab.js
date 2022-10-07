@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Fade from 'react-reveal/Fade';
 import Footer from "./footer";
+import axios from "axios";
 import "../css/guestTab.css";
 
 function App() {
@@ -14,29 +15,20 @@ function App() {
     constructList();
   }, []);
 
-  const constructList = () => {
-        /*
-    axios.get()
-    .then((response) => {
-      list = response.content;
-      data = list;
-      number = list.length();
-    });
-    */
-    const data = ["content1", "content2", "content3", "content4", "content5"];
-    if (text !== inputContent && text !== "") {
-      const lists = [...data, text];
-      setList(lists);  
-    }
-    else{
-      const lists = [...data];
-      setList(lists);  
-    }
+  const constructList = async () => {
+    const {data} = await axios.get('http://localhost:8080/guestAllList');
+    setList(data);
+  }
+  const createMessage = async (name, content) => {
+    await axios.post('http://localhost:8080/guestInsert',{
+      name: name,
+      content: content
+    }).then(constructList);
   }
   const setListItem = () => {
     const listTmp = list.map((item, index) => (
-      <li key={index} id="list-li">
-        {item}
+      <li key={item.id} id="list-li">
+        {item.content}
       </li>
     ));
     return (
@@ -57,13 +49,8 @@ function App() {
   };
   const sendMessage = (tmpText, tmpName) => {
     if (tmpText !== inputContent && tmpText !== "" && tmpName !== "") {
-      console.log("sendMessage : " + tmpText);
-      console.log("sendMessage : " + tmpName);
-      /**
-       * axios.put()
-       */
+      createMessage(tmpName, tmpText);
       onReset();
-      constructList();
     } else if (tmpText === inputContent || tmpText === "") {
       alert("내용을 입력해주세요.");
     } else if (tmpName === "") {

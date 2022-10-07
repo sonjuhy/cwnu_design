@@ -1,5 +1,5 @@
 #artComponent-main-div {
-    text-align: center;
+    text-align: left;
     display: inline-block;
 }
 
@@ -37,14 +37,17 @@
 }
 #artComponent-image-figcaption-div{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
 }
 #artComponent-image-text-div{
     color: #fff;
     display: inline-block;
     position: absolute;
-
+    font-size: 25px;
+    font-family: 'pretendard-light';
+    margin-top: 12%;
+    margin-left: 4%;
 }
 #artComponent-component-title{
     text-align: left;
