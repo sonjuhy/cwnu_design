@@ -11,11 +11,17 @@
     color: black;
     font-size: 25px;
     float: right;
+    margin-top: 1rem;
+    margin-bottom: 0%;
+    font-family: 'pretendard-light';
 }
 #video-head-title-sub {
     color: gray;
     font-size: 15px;
     float: left;
+    margin-top: 1rem;
+    margin-bottom: 0%;
+    font-family: 'pretendard-light';
 }
 #video-head-title-sub-container {
     display: flex;

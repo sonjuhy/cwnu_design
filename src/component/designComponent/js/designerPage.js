@@ -50,6 +50,7 @@ function App(props) {
 
   const makeProductList = () => {
     let tmpList = [];
+    console.log("makeProductList called", location.state?.engName);
     const tmpName = location.state?.engName.replaceAll('_','-');
     const tmpPart = part.split('/')[0];
     

@@ -39,7 +39,7 @@ function App() {
           to={"/work_personal"}
           state={{
             engName: data.engName,
-            partName: "visual/package/",
+            partName: "visual/package",
             studyNum: data.num
           }}
         >

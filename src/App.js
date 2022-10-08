@@ -20,24 +20,24 @@ import ProductPage from "./component/workComponent/productTab";
 import VideoPage from "./component/workComponent/videoTab";
 
 import DesignerPersonalPage from "./component/designComponent/js/designerPage";
-import WorkPersonalPage from "./component/personalComponent/js/commonComponent";
+import WorkPersonalPage from "./component/personalComponent/common/js/commonComponent";
 
-import KimyeonghaComponetPage from "./component/personalComponent/js/kimyeonghaComponet";
-import MoonBoEunComponentPage from "./component/personalComponent/js/moonboeunComponent";
-import SimSeongHyeonComponentPage from "./component/personalComponent/js/simseonghyeonComponent";
-import LeeYuRimComponentPage from "./component/personalComponent/js/leeyurimComponent";
-import BaeSuHyeonComponentPage from "./component/personalComponent/js/baesuhyeonComponent";
-import ShinYeRinComponentPage from "./component/personalComponent/js/shinyerinComponent";
-import KimjoEeComponentPage from "./component/personalComponent/js/KimJoAeComponent";
-import ParkjinHyeongComponentPage from "./component/personalComponent/js/ParkJinHyeongComponent";
-import LeeSeonHwaComponentPage from "./component/personalComponent/js/LeeSeonHwaComponent";
-import LeeYuJinComponentPage from './component/personalComponent/js/LeeYuJinComponent';
-import KimhyukjinComponentPage from "./component/personalComponent/js/KimHyukJinComponent";
-import ParkseongWookComponentPage from "./component/personalComponent/js/ParkSeongWookComponent";
-import ShindayoungComponentPage from "./component/personalComponent/js/ShinDaYoungComponent";
-import LeeJuhyeonComponentPage from "./component/personalComponent/js/LeeJuHyeonComponent";
-import ChoihayoungComponentPage from "./component/personalComponent/js/ChoiHaYoungComponent";
-import HongsunkyungComponentPage from "./component/personalComponent/js/HongSunKyungComponent";
+import KimyeonghaComponetPage from "./component/personalComponent/visual/js/kimyeonghaComponet";
+import MoonBoEunComponentPage from "./component/personalComponent/visual/js/moonboeunComponent";
+import SimSeongHyeonComponentPage from "./component/personalComponent/visual/js/simseonghyeonComponent";
+import LeeYuRimComponentPage from "./component/personalComponent/visual/js/leeyurimComponent";
+import BaeSuHyeonComponentPage from "./component/personalComponent/visual/js/baesuhyeonComponent";
+import ShinYeRinComponentPage from "./component/personalComponent/visual/js/shinyerinComponent";
+import KimjoEeComponentPage from "./component/personalComponent/visual/js/KimJoAeComponent";
+import ParkjinHyeongComponentPage from "./component/personalComponent/visual/js/ParkJinHyeongComponent";
+import LeeSeonHwaComponentPage from "./component/personalComponent/visual/js/LeeSeonHwaComponent";
+import LeeYuJinComponentPage from './component/personalComponent/visual/js/LeeYuJinComponent';
+import KimhyukjinComponentPage from "./component/personalComponent/visual/js/KimHyukJinComponent";
+import ParkseongWookComponentPage from "./component/personalComponent/visual/js/ParkSeongWookComponent";
+import ShindayoungComponentPage from "./component/personalComponent/visual/js/ShinDaYoungComponent";
+import LeeJuhyeonComponentPage from "./component/personalComponent/visual/js/LeeJuHyeonComponent";
+import ChoihayoungComponentPage from "./component/personalComponent/visual/js/ChoiHaYoungComponent";
+import HongsunkyungComponentPage from "./component/personalComponent/visual/js/HongSunKyungComponent";
 
 import TestPage from "./component/lab/verticalScroll";
 

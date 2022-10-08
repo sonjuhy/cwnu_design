@@ -51,7 +51,7 @@ function App() {
       {loading ? <LoadingPage/> : null}
       <div className="row" id="accessories-head">
         <div className="col-8" id='accessories-head-title-line'>
-          <p id="head-title">CRAFT</p>
+          <p id="accessories-head-title">CRAFT</p>
         </div>
         <div className="col-4" id='accessories-head-title-sub-container'>
           <p id="accessories-head-title-sub">장신구 디자인</p>
