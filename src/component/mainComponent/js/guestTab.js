@@ -4,6 +4,8 @@ import Footer from "./footer";
 import axios from "axios";
 import "../css/guestTab.css";
 
+import {BASE_URL} from '../../../api/URL'
+
 function App() {
   const inputContent =
     "한 해 동안 수고한 졸업생들에게 소중한 한마디씩 부탁드립니다. 졸업생을 향한 욕설 및 비방 댓글은 무단 삭제가 될 수 있습니다.";
@@ -16,11 +18,11 @@ function App() {
   }, []);
 
   const constructList = async () => {
-    const {data} = await axios.get('http://localhost:8080/guestAllList');
+    const {data} = await axios.get(`${BASE_URL}/guestAllList`);
     setList(data);
   }
   const createMessage = async (name, content) => {
-    await axios.post('http://localhost:8080/guestInsert',{
+    await axios.post(`${BASE_URL}/guestInsert`,{
       name: name,
       content: content
     }).then(constructList);

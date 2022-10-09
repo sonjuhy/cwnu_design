@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import "../css/artComponent.css";
 import axios from "axios";
+import {BASE_URL} from '../../../../api/URL'
 
 function App(props) {
   
@@ -33,7 +34,7 @@ function App(props) {
   const settingProductName = async () => {
     const { data } = await axios({
       method: "get",
-      url: "http://localhost:8080/productPerson/"+name,
+      url: `${BASE_URL}/productPerson/`+name,
     });
     for(var i=0; i<data.length; i++){
       if(data[i].subPart === partName){

@@ -21,6 +21,18 @@ import ChoihayoungComponentPage from "../../visual/js/ChoiHaYoungComponent";
 import HongsunkyungComponentPage from "../../visual/js/HongSunKyungComponent";
 import VisualDefaultComponentPage from "../../visual/js/visualDefaultComponent";
 
+import KimChaeWonComponentPage from "../../product/js/KimChaeWonComponent";
+import KimDaHyeComponentPage from "../../product/js/KimDaHyeComponent";
+import KimJooYoungComponentPage from "../../product/js/KimJooYoungComponent";
+import KimJiSooComponentPage from "../../product/js/KimJiSooComponent";
+import ChoiGiWonComponentPage from "../../product/js/ChoiGiWonComponent";
+import KimChaeEunComponentPage from "../../product/js/KimChaeEunComponent";
+import KimHeeYeonComponentPage from "../../product/js/KimHeeYeonComponent";
+import MoonJuRyeongComponentPage from "../../product/js/MoonJuRyeongComponent";
+import ParkSuMinComponentPage from "../../product/js/ParkSuMinComponent";
+import LeeSeonHyeonComponentPage from "../../product/js/LeeSeonHyeonComponent";
+import HaDoGyeomComponentPage from "../../product/js/HaDoGyeomComponent";
+
 function App(props) {
   const location = useLocation();
   const engName = location.state?.engName;
@@ -245,6 +257,61 @@ function App(props) {
         )
       }
       
+    }
+    else if(name === 'Kim_Chae_Won'){
+      return (
+        <KimChaeWonComponentPage/>
+      )
+    }
+    else if(name === 'Kim_Ji_Soo'){
+      return (
+        <KimJiSooComponentPage/>
+      )
+    }
+    else if(name === 'Kim_Da_Hye'){
+      return (
+        <KimDaHyeComponentPage/>
+      )
+    }
+    else if(name === 'Kim_Joo_Young'){
+      return (
+        <KimJooYoungComponentPage/>
+      )
+    }
+    else if(name === 'Choi_Gi_Won'){
+      return (
+        <ChoiGiWonComponentPage/>
+      )
+    }
+    else if(name === 'Kim_Chae_Eun'){
+      return (
+        <KimChaeEunComponentPage/>
+      )
+    }
+    else if(name === 'Kim_Hee_Yeon'){
+      return (
+        <KimHeeYeonComponentPage/>
+      )
+    }
+    else if(name === 'Moon_Ju_Ryeong'){
+      return (
+        <MoonJuRyeongComponentPage/>
+      )
+    }
+    else if(name === 'Park_Su_Min'){
+      return (
+        <ParkSuMinComponentPage/>
+      )
+    }
+    else if(name === 'Lee_Seon_Hyun'){
+      return (
+        <LeeSeonHyeonComponentPage/>
+      )
+    }
+    else if(name === 'Ha_Do_Gyeom'){
+      return (
+        <HaDoGyeomComponentPage/>
+      )
     }
     else{
       return(

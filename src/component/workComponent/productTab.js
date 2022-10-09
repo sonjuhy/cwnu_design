@@ -4,6 +4,7 @@ import axios from "axios";
 import Footer from "../mainComponent/js/footer";
 import ArtComponent from "./artComponent/js/artComponent";
 import { Link } from "react-router-dom";
+import {BASE_URL} from '../../api/URL'
 
 import LoadingPage from "../loadingComponent/js/loadingPage";
 
@@ -24,7 +25,7 @@ function App() {
   const settingData = async () => {
     const { data } = await axios({
       method: "get",
-      url: "http://localhost:8080/productList",
+      url: `${BASE_URL}/productList`,
     });
 
     setList(data);

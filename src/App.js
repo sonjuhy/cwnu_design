@@ -88,10 +88,10 @@ function App() {
                     <Link to="about" style={{fontFamily:'pretendard-semibold', textDecoration:'none', fontSize:'250%'}}>ABOUT</Link>
                   </Navbar.Text>
                   <Navbar.Text id="navbar-link">
-                    <Link to="designer" style={{fontFamily:'pretendard-semibold', textDecoration:'none', fontSize:'250%'}}>DESIGNER</Link>
+                    <Link to="work" style={{fontFamily:'pretendard-semibold', textDecoration:'none', fontSize:'250%'}}>WORK</Link>
                   </Navbar.Text>
                   <Navbar.Text id="navbar-link">
-                    <Link to="work" style={{fontFamily:'pretendard-semibold', textDecoration:'none', fontSize:'250%'}}>WORK</Link>
+                    <Link to="designer" style={{fontFamily:'pretendard-semibold', textDecoration:'none', fontSize:'250%'}}>DESIGNER</Link>
                   </Navbar.Text>
                   <div>
                   <Navbar.Text id="navbar-link">
@@ -105,7 +105,7 @@ function App() {
                   </Navbar.Text>
                   <Navbar.Text id="navbar-link">
                     <a
-                      href="https://www.instagram.com/"
+                      href="https://www.instagram.com/cwnu.gradshow"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

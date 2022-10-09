@@ -4,6 +4,8 @@ import Person from "./designerComponent";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import {BASE_URL} from '../../../api/URL'
+
 import CraftList from "../../designComponent/js/designerCraftPage";
 import VisualList from "../../designComponent/js/designerVisualPage";
 import ProductList from "../../designComponent/js/designerProductPage";
@@ -19,7 +21,7 @@ function App() {
    const settingData = async () => {
      const { data } = await axios({
        method: "get",
-       url: "http://localhost:8080/allList",
+       url: `${BASE_URL}/allList`,
      });
  
      setList(data);

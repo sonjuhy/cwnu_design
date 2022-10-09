@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../css/KimDaHyeComponent.css';
+import '../css/KimJiSooComponent.css';
 
  function App() {
     return (
-      <div id='kimdahye-main-div'>
+      <div id='kimjisoo-main-div'>
         <div id="personal-img-div">
-            <img id="personal-img" alt="" src="assets/img/personal/product/KimDaHye/Kim-Da-Hye_1.png"/>
+            <img id="personal-img" alt="" src="assets/img/personal/product/KimJiSoo/Kim-Ji-Soo_1.png"/>
         </div>
         <div id="personal-profile-div">
             <Link to={'/design_personal'} state={{
-              engName: 'Kim_Da_Hye',
+              engName: 'Kim_Ji_Soo',
               partName: 'product/product',
-              studyNum: '20184076',
+              studyNum: '20184080',
             }}>
-                <img src="assets/img/personal/profile/20184076.png" alt="" style={{width:'30%'}}/>'
+                <img src="assets/img/personal/profile/20184080.png" alt="" style={{width:'30%'}}/>'
             </Link>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "../css/designerPage.css";
 import ProductList from "./designerPageComponent";
 import axios from "axios";
+import {BASE_URL} from '../../../api/URL'
 
 function App(props) {
   const location = useLocation();
@@ -25,7 +26,7 @@ function App(props) {
   const settingData = async (el) => {
     const { data } = await axios({
       method: "get",
-      url: "http://localhost:8080/socialId/"+location.state?.engName,
+      url: `${BASE_URL}/socialId/`+location.state?.engName,
     });
     setProfilePicture(`assets/img/personal/profileCut/${el}.jpg`);
     setNameKor(data[0].krName);
@@ -42,7 +43,7 @@ function App(props) {
   const getProductName = async (el) => {
     const { data } = await axios({
       method: "get",
-      url: "http://localhost:8080/productPerson/"+el,
+      url: `${BASE_URL}/productPerson/`+el,
     });
     
     setProductList(data);

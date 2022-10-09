@@ -3,6 +3,7 @@ import "../css/designerListPage.css";
 import Person from "../../mainComponent/js/designerComponent";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import {BASE_URL} from '../../../api/URL'
 
 export function useHorizontalScroll() {
   const elRef = useRef();
@@ -33,7 +34,7 @@ function App() {
   const settingData = async () => {
     const { data } = await axios({
       method: "get",
-      url: "http://localhost:8080/productList",
+      url: `${BASE_URL}/productList`,
     });
 
     setList(data);

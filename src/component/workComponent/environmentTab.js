@@ -4,6 +4,8 @@ import Footer from "../mainComponent/js/footer";
 import ArtComponentDouble from "./artComponent/js/artComponentDouble";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import {BASE_URL} from '../../api/URL'
+
 import LoadingPage from "../loadingComponent/js/loadingPage";
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
   const settingData = async () => {
     const { data } = await axios({
       method: "get",
-      url: "http://localhost:8080/craftList",
+      url: `${BASE_URL}/craftList`,
     });
     setList(data);
   };
